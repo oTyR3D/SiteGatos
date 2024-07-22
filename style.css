@@ -37,8 +37,8 @@ body {
 
 img {
     width: 100%; /* Alterei o tamanho das imagens para ocuparem 100% da largura da célula da grade */
-    height: auto; /* Alterei o tamanho das imagens para manter a proporção original */
-    object-fit: cover; /* Alterei o estilo para que as imagens sejam cortadas para caber na célula da grade */
+    max-height: fit-content;/* Alterei o tamanho das imagens para manter a proporção original */
+    object-fit: fill; /* Alterei o estilo para que as imagens sejam cortadas para caber na célula da grade */
     border-radius: 45px;
 }
 
