@@ -38,13 +38,27 @@ body {
 img {
     width: 100%; /* Alterei o tamanho das imagens para ocuparem 100% da largura da célula da grade */
     max-height: fit-content;/* Alterei o tamanho das imagens para manter a proporção original */
-    object-fit: fill; /* Alterei o estilo para que as imagens sejam cortadas para caber na célula da grade */
+    object-fit: cover; /* Alterei o estilo para que as imagens sejam cortadas para caber na célula da grade */
     border-radius: 45px;
 }
 
 @media (max-width: 768px) {
     .apresentacao__fotos {
         grid-template-columns: repeat(2, 1fr); /* Alterei o número de colunas para 2 em telas menores ou iguais a 768px */
+    }
+
+    img {
+        height: 200px; /* Defini uma altura fixa para as imagens em telas menores ou iguais a 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .apresentacao__fotos {
+        grid-template-columns: repeat(2, 1fr); /* Alterei o número de colunas para 1 em telas menores ou iguais a 480px */
+    }
+
+    img {
+        height: 300px; /* Defini uma altura fixa para as imagens em telas menores ou iguais a 480px */
     }
 }
 
